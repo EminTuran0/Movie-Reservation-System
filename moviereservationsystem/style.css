@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sol Kısım */
+.left, .center, .right {
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.left {
+  width: 25%;
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+}
+
+.left form {
+  display: flex;
+  flex-direction: column;
+}
+
+.left input {
+  margin: 8px 0;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.left button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.left button:hover {
+  background-color: #45a049;
+}
+
+/* Orta Kısım */
+.center {
+  width: 50%;
+  text-align: center;
+}
+
+#adminPanel {
+  margin-bottom: 20px;
+}
+
+#adminPanel input {
+  margin: 5px;
+  padding: 8px;
+}
+
+#adminPanel button {
+  padding: 8px 15px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#adminPanel button:hover {
+  background-color: #1976d2;
+}
+
+#seatingArea {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: #ccc;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.seat.selected {
+  background-color: green;
+}
+
+.seat:hover::after {
+  content: attr(data-price);
+  position: absolute;
+  top: -25px;
+  left: 0;
+  background-color: black;
+  color: white;
+  padding: 2px 5px;
+  font-size: 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* Sağ Kısım */
+.right {
+  width: 25%;
+  background-color: #f1f1f1;
+  border-left: 1px solid #ccc;
+}
+
+.right button {
+  padding: 10px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.right button:hover {
+  background-color: #e68900;
+}
+
+/* Genel */
+.hidden {
+  display: none;
+}

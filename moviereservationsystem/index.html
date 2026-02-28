@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Theater Reservation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Left Part: User Form -->
+    <div class="left">
+      <h2>User Information</h2>
+      <form id="userForm">
+        <input type="text" placeholder="Name" id="name" required>
+        <input type="text" placeholder="Surname" id="surname" required>
+        <input type="email" placeholder="Email" id="email" required>
+        <input type="tel" placeholder="Phone Number" id="phone" required>
+        <input type="number" placeholder="Age" id="age" required min="0">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Center Part: Seating -->
+    <div class="center">
+      <div id="adminPanel" class="hidden">
+        <h2>Set Seating</h2>
+        <input type="number" placeholder="Rows" id="rows" min="1">
+        <input type="number" placeholder="Cols" id="cols" min="1">
+        <button id="setSeats">Set</button>
+      </div>
+      <div id="seatingArea"></div>
+    </div>
+
+    <!-- Right Part: Reservation Info -->
+    <div class="right hidden" id="reservationInfo">
+      <h2>Reservation Details</h2>
+      <p><strong>Name:</strong> <span id="resName"></span></p>
+      <p><strong>Surname:</strong> <span id="resSurname"></span></p>
+      <p><strong>Selected Seats:</strong> <span id="resSeats"></span></p>
+      <p><strong>Total Price:</strong> $<span id="resPrice"></span></p>
+      <button id="confirm">Confirm</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
